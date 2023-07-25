@@ -20,7 +20,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
-import androidx.compose.material.SnackbarDefaults.backgroundColor
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
@@ -31,7 +30,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.kay.movieapp.ui.theme.MovieAppTheme
@@ -47,7 +45,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-
 // this function just activate a lambda function
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
@@ -59,9 +56,8 @@ fun MyApp(
             topBar = {
                 TopAppBar(
                     backgroundColor = Color.Magenta,
-                    elevation = 5.dp,
+                    elevation = 5.dp
                 ) {
-
                     Text(
                         text = "Movies"
                     )
@@ -97,19 +93,20 @@ fun MainContent(
         LazyColumn {
             items(items = movieList) {
                 MovieRow(movieTitle = it) { movie ->
-                    Log.d("TAG","mainContent: $movie")
+                    Log.d("TAG", "mainContent: $movie")
                 }
             }
         }
     }
 }
 
-@Composable
 // We want to create a nice card around each items.
 // Make each row clickable
+@Composable
 fun MovieRow(
     movieTitle: String,
-    onItemClicked: (String) -> Unit) {
+    onItemClicked: (String) -> Unit
+) {
     Card(
         modifier = Modifier
             .padding(4.dp)
@@ -136,7 +133,6 @@ fun MovieRow(
                     imageVector = Icons.Default.AccountBox,
                     contentDescription = "AccountIcon"
                 )
-
             }
             Text(text = movieTitle)
         }
