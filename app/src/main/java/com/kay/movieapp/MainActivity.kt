@@ -31,7 +31,7 @@ fun MyApp(
     }
 }
 
-// TODO: Need to learn how to make surface size match parent
+// TODO: Need to learn how to make surface size match parent (fillMaxSize?)
 // Need to wrap it around a row, column or box
 // TODO: Need to learn how to center the text in the middle of the screen
 

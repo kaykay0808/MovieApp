@@ -28,14 +28,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.kay.movieapp.navigation.MovieScreens
+import com.kay.movieapp.navigation.Screens
 
 @Composable
 fun HomeScreen(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                backgroundColor = Color.Magenta,
+                backgroundColor = Color.LightGray,
                 elevation = 5.dp
             ) {
                 Text(
@@ -73,9 +73,11 @@ fun MainContent(
     ) {
         LazyColumn {
             items(items = movieList) { movieTitle ->
-                MovieRow(movieTitle = movieTitle) { movie ->
+                MovieRow(
+                    movieTitle = movieTitle
+                ) { movie ->
                     Log.d("TAG", "mainContent: $movie")
-                    navController.navigate(route = MovieScreens.DetailsScreen.name + "/$movie")
+                    navController.navigate(route = Screens.DetailsScreen.name + "/$movie the shit movie")
                 }
             }
         }

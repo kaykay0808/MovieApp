@@ -1,11 +1,11 @@
 package com.kay.movieapp.navigation
 
 // www.screen.com/type_of_route
-enum class MovieScreens {
+enum class Screens {
     HomeScreen,
     DetailsScreen;
     companion object {
-        fun fromRoute(route: String?): MovieScreens =
+        fun fromRoute(route: String?): Screens =
             // trying to figure out what is the route before the "/"
             when (route?.substringBefore("/")) {
                 HomeScreen.name -> HomeScreen

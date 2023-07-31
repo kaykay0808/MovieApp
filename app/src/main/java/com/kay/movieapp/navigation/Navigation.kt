@@ -16,19 +16,26 @@ fun MovieNavigation() {
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = MovieScreens.HomeScreen.name
+        startDestination = Screens.HomeScreen.name
     ) {
-        composable(MovieScreens.HomeScreen.name) {
+        /** HOME SCREEN */
+        composable(Screens.HomeScreen.name) {
             // Here we pass where this should lead us to
             HomeScreen(navController = navController)
         }
+
+        /** DETAILS SCREEN */
+        // www.movie.com/detail-screen/id=32
         composable(
-            route = MovieScreens.DetailsScreen.name + "/{movie}",
+            // The default argument is always a string if we don't pass in /{movie]
+            route = Screens.DetailsScreen.name + "/{movie}", // <- Name the value or the variable
             arguments = listOf(
+                // Name of nav argument should be the same as the one we passed in the route.
                 navArgument(name = "movie") {
                     type = NavType.StringType
                 }
             )
+            // NavBackStackEntry a variable that contains the information we want
         ) {
             // Here we pass where this should lead us to
             DetailsScreen(
