@@ -54,7 +54,7 @@ fun MainContent(
         LazyColumn {
             items(items = movieList) { movieTitle ->
                 MovieRow(
-                    movieTitle = movieTitle
+                    movieInfo = movieTitle
                 ) { movie ->
                     Log.d("TAG", "mainContent: $movie")
                     navController.navigate(route = Screens.DetailsScreen.name + "/$movie <- This is the ID")

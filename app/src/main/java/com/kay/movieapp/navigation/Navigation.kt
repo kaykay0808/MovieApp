@@ -9,7 +9,7 @@ import androidx.navigation.navArgument
 import com.kay.movieapp.ui.screens.detail.DetailsScreen
 import com.kay.movieapp.ui.screens.home.HomeScreen
 
-/** NavController */
+/** NavController >> Nav*/
 
 @Composable
 fun MovieNavigation() {

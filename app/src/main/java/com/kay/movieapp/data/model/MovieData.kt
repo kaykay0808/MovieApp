@@ -2,7 +2,7 @@ package com.kay.movieapp.data.model
 
 data class MovieData(
     val id: String, // usually we have Int here :/
-    val movieTitle: String,
+    val title: String,
     val year: String,
     val genre: String,
     val director: String,
@@ -18,7 +18,7 @@ fun getMovies(): List<MovieData> {
     return listOf(
         MovieData(
             id = "tt0499549",
-            movieTitle = "Avatar",
+            title = "Avatar",
             year = "2009",
             genre = "Action, Adventure, Fantasy",
             director = "James Cameron",
@@ -37,7 +37,7 @@ fun getMovies(): List<MovieData> {
 
         MovieData(
             id = "tt0416449",
-            movieTitle = "300",
+            title = "300",
             year = "2006",
             genre = "Action, Drama, Fantasy",
             director = "Zack Snyder",
@@ -55,7 +55,7 @@ fun getMovies(): List<MovieData> {
 
         MovieData(
             id = "tt0848228",
-            movieTitle = "The Avengers",
+            title = "The Avengers",
             year = "2012",
             genre = "Action, Sci-Fi, Thriller",
             director = "Joss Whedon",
@@ -74,7 +74,7 @@ fun getMovies(): List<MovieData> {
 
         MovieData(
             id = "tt0993846",
-            movieTitle = "The Wolf of Wall Street",
+            title = "The Wolf of Wall Street",
             year = "2013",
             genre = "Biography, Comedy, Crime",
             director = "Martin Scorsese",
@@ -93,7 +93,7 @@ fun getMovies(): List<MovieData> {
 
         MovieData(
             id = "tt0816692",
-            movieTitle = "Interstellar",
+            title = "Interstellar",
             year = "2014",
             genre = "Adventure, Drama, Sci-Fi",
             director = "Christopher Nolan",
@@ -111,7 +111,7 @@ fun getMovies(): List<MovieData> {
         ),
         MovieData(
             id = "tt0944947",
-            movieTitle = "Game of Thrones",
+            title = "Game of Thrones",
             year = "2011 - 2018",
             genre = "Adventure, Drama, Fantasy",
             director = "N/A",
@@ -128,10 +128,9 @@ fun getMovies(): List<MovieData> {
             rating = "9.5"
         ),
 
-
         MovieData(
             id = "tt2306299",
-            movieTitle = "Vikings",
+            title = "Vikings",
             year = "2013–2020",
             genre = "Action, Drama, History",
             director = "N/A",
@@ -150,7 +149,7 @@ fun getMovies(): List<MovieData> {
 
         MovieData(
             id = "tt0903747",
-            movieTitle = "Breaking Bad",
+            title = "Breaking Bad",
             year = "2008–2013",
             genre = "Crime, Drama, Thriller",
             director = "N/A",
@@ -169,7 +168,7 @@ fun getMovies(): List<MovieData> {
 
         MovieData(
             id = "tt2707408",
-            movieTitle = "Narcos",
+            title = "Narcos",
             year = "2015-",
             genre = "Biography, Crime, Drama",
             director = "N/A",
@@ -184,6 +183,25 @@ fun getMovies(): List<MovieData> {
                 "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU0NzQ0OTAwNl5BMl5BanBnXkFtZTgwMDAyMzA1OTE@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
             ),
             rating = "9.5"
+        ),
+
+        MovieData(
+            id = "tt2707506",
+            title = "Kay and the awesome adventure",
+            year = "2023-",
+            genre = "Biography, comedy, Drama",
+            director = "N/A",
+            actors = "Kay Ho, Christoffer Knutsen, Jonas reed, Bjørn Kurtis, Fanny Åhrman",
+            plot = "A Journey of a hardworking asian living in Norway.",
+            poster = "http://ia.media-imdb.com/images/M/MV5BMTU0ODQ4NDg2OF5BMl5BanBnXkFtZTgwNzczNTE4OTE@._V1_SX300.jpg",
+            images = listOf(
+                "https://smoothcomp.com/pictures/t/2705179-9c98/kayashiro-ho.jpg",
+                "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIxMDkyOTEyNV5BMl5BanBnXkFtZTgwNjY3Mjc3OTE@._V1_SY1000_SX1500_AL_.jpg",
+                "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2NDUwMTU2NV5BMl5BanBnXkFtZTgwNTI1Mzc3OTE@._V1_SY1000_CR0,0,1499,1000_AL_.jpg",
+                "https://images-na.ssl-images-amazon.com/images/M/MV5BODA1NjAyMTQ3Ml5BMl5BanBnXkFtZTgwNjI1Mzc3OTE@._V1_SY1000_CR0,0,1499,1000_AL_.jpg",
+                "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU0NzQ0OTAwNl5BMl5BanBnXkFtZTgwMDAyMzA1OTE@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
+            ),
+            rating = "10"
         )
     )
 }
