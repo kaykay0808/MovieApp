@@ -190,7 +190,7 @@ fun getMovies(): List<MovieData> {
             title = "Kay and the awesome adventure",
             year = "2023-",
             genre = "Biography, comedy, Drama",
-            director = "N/A",
+            director = "Bruce Lee",
             actors = "Kay Ho, Christoffer Knutsen, Jonas reed, Bjørn Kurtis, Fanny Åhrman",
             plot = "A Journey of a hardworking asian living in Norway.",
             poster = "http://ia.media-imdb.com/images/M/MV5BMTU0ODQ4NDg2OF5BMl5BanBnXkFtZTgwNzczNTE4OTE@._V1_SX300.jpg",

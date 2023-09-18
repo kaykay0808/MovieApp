@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
+import androidx.compose.material.Divider
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -118,7 +119,23 @@ fun MovieRow(
                                 ) {
                                     append(movieInfo.plot)
                                 }
-                            }
+                            },
+                            modifier = Modifier.padding(6.dp)
+                        )
+                        Divider(
+                            modifier = Modifier.padding(3.dp)
+                        )
+                        Text(
+                            text = "Director: ${movieInfo.director}",
+                            style = MaterialTheme.typography.caption
+                        )
+                        Text(
+                            text = "Actors: ${movieInfo.actors}",
+                            style = MaterialTheme.typography.caption
+                        )
+                        Text(
+                            text = "Rating: ${movieInfo.rating}",
+                            style = MaterialTheme.typography.caption
                         )
                     }
                 }
