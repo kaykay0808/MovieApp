@@ -1,6 +1,7 @@
 package com.kay.movieapp.ui.widgets
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -8,6 +9,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -37,6 +40,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
+import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import coil.transform.CircleCropTransformation
 import com.kay.movieapp.data.model.MovieData
@@ -47,7 +51,7 @@ import com.kay.movieapp.data.model.getMovies
 @Composable
 fun MovieRow(
     movieInfo: MovieData,
-    onItemClicked: (String) -> Unit
+    onItemClicked: (String) -> Unit = {}
 ) {
     var infoExpanded by remember { mutableStateOf(false) }
 
@@ -151,6 +155,25 @@ fun MovieRow(
                         Icons.Filled.KeyboardArrowDown
                     },
                     contentDescription = "Down Arrow"
+                )
+            }
+        }
+    }
+}
+
+@Composable
+fun HorizontalScrollableImageView(newMovieList: List<MovieData>) {
+    LazyRow {
+        items(newMovieList[0].images) { image ->
+            Card(
+                modifier = Modifier
+                    .padding(12.dp)
+                    .size(240.dp),
+                elevation = 5.dp
+            ) {
+                Image(
+                    painter = rememberAsyncImagePainter(model = image),
+                    contentDescription = "Movie image"
                 )
             }
         }

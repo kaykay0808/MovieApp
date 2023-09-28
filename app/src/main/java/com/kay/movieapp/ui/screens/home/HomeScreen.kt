@@ -57,7 +57,7 @@ fun MainContent(
                     movieInfo = movieTitle
                 ) { movie ->
                     Log.d("TAG", "mainContent: $movie")
-                    navController.navigate(route = Screens.DetailsScreen.name + "/$movie <- This is the ID")
+                    navController.navigate(route = Screens.DetailsScreen.name + "/$movie")
                 }
             }
         }

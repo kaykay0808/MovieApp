@@ -167,7 +167,7 @@ fun getMovies(): List<MovieData> {
         ),
 
         MovieData(
-            id = "tt2707408",
+            id = "tt3707408",
             title = "Narcos",
             year = "2015-",
             genre = "Biography, Crime, Drama",
@@ -186,7 +186,7 @@ fun getMovies(): List<MovieData> {
         ),
 
         MovieData(
-            id = "tt2707506",
+            id = "tt4707506",
             title = "Kay and the awesome adventure",
             year = "2023-",
             genre = "Biography, comedy, Drama",
